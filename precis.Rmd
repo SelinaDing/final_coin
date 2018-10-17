@@ -28,7 +28,6 @@ Gold Price https://fred.stlouisfed.org/series/GOLDAMGBD228NLBM
 <br>
 S&P 500 https://fred.stlouisfed.org/series/SP500
 
-## Data Sample
 ```{r echo=FALSE}
 #read data
 btc <- read.csv("btc.csv")
@@ -38,8 +37,17 @@ index_t <- read.csv("bletchley_total.csv")
 sp500 <- read.csv("SP500.csv")
 usd <- read.csv("DTWEXB.csv")
 gold <- read.csv("GOLDAMGBD228NLBM.csv")
-knitr::kable(tail(btc))
 ```
+
+## Data Sample of Bitcoin
+```{r echo=FALSE, message=FALSE}
+btc1 <- btc %>%
+  filter(!is.na(price.USD.)) %>%
+  select(date, price.USD., marketcap.USD., txVolume.USD., txCount, fees)
+knitr::kable(summary(btc1))
+```
+
+
 
 
 
