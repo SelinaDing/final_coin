@@ -1,0 +1,18 @@
+---
+title: "final_cion"
+author: "Cunhonghu Ding"
+date: "20181017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readxl)
+```
+
+```{r}
+#read data
+btc <- read.csv("btc.csv")
+```
+
