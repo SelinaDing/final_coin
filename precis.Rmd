@@ -1,0 +1,35 @@
+---
+title: "final_cion"
+author: "Cunhonghu Ding"
+date: "20181017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readxl)
+```
+
+# BitcoinExchangeFH - Bitcoin exchange market data feed handler
+
+BitcoinExchangeFH is a slim application to record the price depth and trades in various exchanges. You can set it up quickly and record the all the exchange data in a few minutes!
+
+Users can
+
+1. Streaming market data to a target application (via ZeroMQ)
+2. Recording market data for backtesting and analysis.
+3. Recording market data to a in-memory database and other applications can quickly access to it.
+4. Customize the project for trading use.
+
+```{r echo=FALSE}
+#read data
+btc <- read.csv("btc.csv")
+eth <- read.csv("eth.csv")
+ltc <- read.csv("ltc.csv")
+index_t <- read.csv("bletchley_total.csv")
+sp500 <- read.csv("SP500.csv")
+usd <- read.csv("DTWEXB.csv")
+gold <- read.csv("GOLDAMGBD228NLBM.csv")
+```
+
