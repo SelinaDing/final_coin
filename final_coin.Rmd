@@ -14,5 +14,11 @@ library(readxl)
 ```{r}
 #read data
 btc <- read.csv("btc.csv")
+eth <- read.csv("eth.csv")
+ltc <- read.csv("ltc.csv")
+index_t <- read.csv("bletchley_total.csv")
+sp500 <- read.csv("SP500.csv")
+usd <- read.csv("DTWEXB.csv")
+gold <- read.csv("GOLDAMGBD228NLBM.csv")
 ```
 
