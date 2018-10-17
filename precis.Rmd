@@ -1,5 +1,5 @@
 ---
-title: "final_cion"
+title: "Precis of Coin Exchange"
 author: "Cunhonghu Ding"
 date: "20181017"
 output: html_document
@@ -11,17 +11,24 @@ library(tidyverse)
 library(readxl)
 ```
 
-# BitcoinExchangeFH - Bitcoin exchange market data feed handler
+# Coin Exchange 
+## - coin exchange market data, charts and forecast 
+<br>
+Coin Exchange is your window into the world of cryptocurrency, bringing you real-time prices and historical charts for various coins. You can add your favourite cryptocurrencies to a handy watchlist, making it easy to follow the coins that are most relevant to you. You can also create charts based on your own needs. You can even analysis the cryptocurrency market with rich data in the capital market.  
 
-BitcoinExchangeFH is a slim application to record the price depth and trades in various exchanges. You can set it up quickly and record the all the exchange data in a few minutes!
+## Data Sources
+<br>
+Coin Prices https://coinmetrics.io/data-downloads/
+<br>
+Bletchley indexes data https://www.bletchleyindexes.com/downloads
+<br>
+U.S. Dollar Index https://fred.stlouisfed.org/series/DTWEXB
+<br>
+Gold Price https://fred.stlouisfed.org/series/GOLDAMGBD228NLBM
+<br>
+S&P 500 https://fred.stlouisfed.org/series/SP500
 
-Users can
-
-1. Streaming market data to a target application (via ZeroMQ)
-2. Recording market data for backtesting and analysis.
-3. Recording market data to a in-memory database and other applications can quickly access to it.
-4. Customize the project for trading use.
-
+## Data Sample
 ```{r echo=FALSE}
 #read data
 btc <- read.csv("btc.csv")
@@ -31,5 +38,8 @@ index_t <- read.csv("bletchley_total.csv")
 sp500 <- read.csv("SP500.csv")
 usd <- read.csv("DTWEXB.csv")
 gold <- read.csv("GOLDAMGBD228NLBM.csv")
+knitr::kable(tail(btc))
 ```
+
+
 
